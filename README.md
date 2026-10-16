@@ -1,6 +1,6 @@
 # Sustaincia Smart Mobility 2026 Theme (`sustaincia-mobility2026`)
 
-Theme and asset repository for the **6th China (Macau) New Energy & Smart Transportation Trends Development Forum** (第六屆中國（澳門）新能源與智能交通趨勢發展論壇) and the live demonstration session **Road 03 · Car Show Visitor Sightlines** (道路03 · 車展參觀者眼中的看點, Instructor: 黃穎心).
+Theme and asset repository for the **6th China (Macau) New Energy & Smart Transportation Trends Development Forum** (第六屆中國（澳門）新能源與智能交通趨勢發展論壇) and the live demonstration session **Road 03 · Car Show Visitor Sightlines** (道路03 · 車展參觀者眼中的看點，導師：Judy Wong).
 
 - **Event Date**: October 31, 2026 (15:45 — 16:45)
 - **Venue**: The Venetian Macao, Halls ABC (澳門威尼斯人展館 ABC)

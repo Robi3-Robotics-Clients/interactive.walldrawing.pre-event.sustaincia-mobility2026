@@ -2,6 +2,7 @@
   "gform-url": "https://docs.google.com/forms/d/e/1FAIpQLSeaQVGUVdSHMUo3V2U7jrzK9qGUBuT5TaU3k7_O2_osulXuzw/viewform",
   "app_title": "第六屆中國（澳門）新能源與智能交通趨勢發展論壇",
   "home_title": "交通出行人工智能流程演示",
-  "home_description": "道路03 · 車展參觀者眼中的看點（導師：黃穎心）\n在超寬 LED 大屏上即時呈現色彩偏好、汽車部件與品牌關注度洞察",
-  "market_research_photo_count": 5
+  "home_description": "道路03 · 車展參觀者眼中的看點（導師：Judy Wong）\n在超寬 LED 大屏上即時呈現色彩偏好、汽車部件與品牌關注度洞察",
+  "market_research_photo_count": 5,
+  "enable_lucky_draw": false
 }
