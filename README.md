@@ -27,3 +27,27 @@ event_ui/
     ├── config-dynamic-img.json
     └── static/                 # Sponsor logos, static wall cards, and metadata
 ```
+
+---
+
+## Live Demo & Market Research AI Dashboard Plan (`收集 → 拆解 → 重組`)
+
+In this session, each participant is invited to take **5 photos** (`/market-research/sustaincia-mobility2026`) of exhibits on the expo floor that interest them (which may or may not be passenger cars — e.g., EV charging piles, battery packs, autonomous sensors/LiDAR, eVTOLs, smart traffic solutions, or booth displays).
+
+Because the exact mix of exhibits photographed by attendees is only known once photos start arriving, the **Market Research AI Dashboard** uses a **generalized data structure (`MarketResearchInsight`)** where all analytical dimensions are configurable via `event_ui/go-config.json` and executed through the `OnlineService` interface (`APP_MODE=online`).
+
+### Two-Stage Event Workflow
+
+1. **Stage 1: Zero-Parameter Preliminary Photo Collection (`"fields": []`)**
+   - **Toggles**: `"enable_lucky_draw": false`, `"enable_market_research": true`, `"fields": []`.
+   - No Stage 1 starter parameters are required. Participants capture 5 photos of exhibits that catch their attention via `/market-research/sustaincia-mobility2026`.
+   - Photos and participant names are stored in PostgreSQL (`photo_files`) and displayed on the projection wall (`/ui/?ui=modern-wall&event=sustaincia-mobility2026`).
+   - Opening the Dashboard during Stage 1 shows live collection metrics (Total Photos, Total Participants, Preliminary Photo Stream) without forcing rigid categories before seeing the data.
+
+2. **Stage 2: Post-Preliminary Parameter Discovery & Batch Re-Analysis**
+   - After inspecting the preliminary round of photos to see what exhibits visitors actually photographed (e.g., ratio of vehicles vs. charging infrastructure vs. smart cockpit tech), you can either:
+     - Click **"AI Suggest Parameters"** (`POST /api/sustaincia-mobility2026/dashboard/suggest-fields`) on the Dashboard to let `OnlineService` inspect the preliminary photos and populate tailored `fields`, **or**
+     - Edit `market_research_config.fields` directly in `event_ui/go-config.json`.
+   - Trigger **Batch Re-Analysis** (`POST /api/sustaincia-mobility2026/dashboard/reanalyze`) so the `OnlineService` AI layer extracts the newly refined dimensions across all preliminary photos and updates the live dashboard charts and Q&A context without rebuilding any code.
+
+
