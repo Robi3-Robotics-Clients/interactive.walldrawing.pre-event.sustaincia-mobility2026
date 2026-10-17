@@ -38,16 +38,32 @@ Because the exact mix of exhibits photographed by attendees is only known once p
 
 ### Two-Stage Event Workflow
 
-1. **Stage 1: Zero-Parameter Preliminary Photo Collection (`"fields": []`)**
-   - **Toggles**: `"enable_lucky_draw": false`, `"enable_market_research": true`, `"fields": []`.
-   - No Stage 1 starter parameters are required. Participants capture 5 photos of exhibits that catch their attention via `/market-research/sustaincia-mobility2026`.
-   - Photos and participant names are stored in PostgreSQL (`photo_files`) and displayed on the projection wall (`/ui/?ui=modern-wall&event=sustaincia-mobility2026`).
-   - Opening the Dashboard during Stage 1 shows live collection metrics (Total Photos, Total Participants, Preliminary Photo Stream) without forcing rigid categories before seeing the data.
+1. **Stage 1: Preliminary Photo Collection & Field Submission (`/market-research/sustaincia-mobility2026`)**
+   - **Toggles in `event_ui/go-config.json`**:
+     - `"enable_lucky_draw": false`: Hides the gift corner icon on the projection wall.
+     - `"enable_market_research": true`: Activates the live research dashboard (`#corner-dashboard`).
+     - `"enabled": false`, `"enable_event_form": false`: Bypasses external forms and completes submission immediately in the app.
+     - `"capture_instruction"` / `"capture_instruction_en"`: Event-tailored capture instructions displayed to visitors.
+     - `"analysis_fields"`: 4 structured dimensions (`interest_topic`, `visitor_role`, `experience_rating`, `observation_notes`) collected directly on the Arrange & Submit page.
+   - **Flutter Web App**: [http://localhost:8080/market-research/sustaincia-mobility2026](http://localhost:8080/market-research/sustaincia-mobility2026)
+   - Participants capture 5 photos of exhibits that catch their attention, arrange them, fill in their name and research fields, and submit.
+   - Photos and participant names are stored in PostgreSQL (`photo_files`) and float live on the projection wall (`/ui/?ui=modern-wall&event=sustaincia-mobility2026`).
 
 2. **Stage 2: Post-Preliminary Parameter Discovery & Batch Re-Analysis**
    - After inspecting the preliminary round of photos to see what exhibits visitors actually photographed (e.g., ratio of vehicles vs. charging infrastructure vs. smart cockpit tech), you can either:
      - Click **"AI Suggest Parameters"** (`POST /api/sustaincia-mobility2026/dashboard/suggest-fields`) on the Dashboard to let `OnlineService` inspect the preliminary photos and populate tailored `fields`, **or**
      - Edit `market_research_config.fields` directly in `event_ui/go-config.json`.
    - Trigger **Batch Re-Analysis** (`POST /api/sustaincia-mobility2026/dashboard/reanalyze`) so the `OnlineService` AI layer extracts the newly refined dimensions across all preliminary photos and updates the live dashboard charts and Q&A context without rebuilding any code.
+
+---
+
+## Direct Links & Access Points
+
+| Component | URL / Route | Description |
+| :--- | :--- | :--- |
+| **Flutter Market Research App** | [`http://localhost:8080/market-research/sustaincia-mobility2026`](http://localhost:8080/market-research/sustaincia-mobility2026) | Mobile web app for visitors to capture 5 photos and submit analysis insights |
+| **Interactive Wall Display** | [`http://localhost:8080/ui/?ui=modern-wall&event=sustaincia-mobility2026`](http://localhost:8080/ui/?ui=modern-wall&event=sustaincia-mobility2026) | Ultra-wide LED projection wall displaying floating attendee photocards |
+| **Market Research Dashboard** | Click `#corner-dashboard` on Wall or visit [`http://localhost:8080/dashboard?event=sustaincia-mobility2026`](http://localhost:8080/dashboard?event=sustaincia-mobility2026) | Real-time AI analytics, visual breakdown, and natural-language Q&A |
+
 
 
