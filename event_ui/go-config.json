@@ -6,6 +6,8 @@
   "market_research_photo_count": 5,
   "enable_lucky_draw": false,
   "enable_market_research": true,
+  "capture_instruction": "請拍攝現場最吸引你的 5 張展品、技術或展位細節（不限於整車，包含車身外觀、智能座艙、電池技術、充電設施或特色展位）。",
+  "capture_instruction_en": "Please capture 5 photos of exhibits or tech details that interest you (including vehicle design, smart cockpits, batteries, charging piles, or booth displays).",
   "market_research_config": {
     "dashboard_title": "車展參觀者眼中的看點 · AI 即時洞察看板",
     "dashboard_subtitle": "道路03 · 收集、拆解、重組現場觀眾照片與評價（導師：Judy Wong）",
