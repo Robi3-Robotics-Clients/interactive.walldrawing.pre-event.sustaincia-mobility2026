@@ -1,5 +1,7 @@
 {
   "gform-url": "https://docs.google.com/forms/d/e/1FAIpQLSeaQVGUVdSHMUo3V2U7jrzK9qGUBuT5TaU3k7_O2_osulXuzw/viewform",
+  "enabled": false,
+  "enable_event_form": false,
   "app_title": "第六屆中國（澳門）新能源與智能交通趨勢發展論壇",
   "home_title": "交通出行人工智能流程演示",
   "home_description": "道路03 · 車展參觀者眼中的看點（導師：Judy Wong）\n在超寬 LED 大屏上即時呈現色彩偏好、汽車部件與品牌關注度洞察",
@@ -8,6 +10,52 @@
   "enable_market_research": true,
   "capture_instruction": "請拍攝現場最吸引你的 5 張展品、技術或展位細節（不限於整車，包含車身外觀、智能座艙、電池技術、充電設施或特色展位）。",
   "capture_instruction_en": "Please capture 5 photos of exhibits or tech details that interest you (including vehicle design, smart cockpits, batteries, charging piles, or booth displays).",
+  "analysis_fields": [
+    {
+      "key": "interest_topic",
+      "label": "關注主題 · Focus Area",
+      "type": "select",
+      "required": true,
+      "options": [
+        "新能源整車 · New Energy Vehicles",
+        "智能座艙與人機交互 · Smart Cockpit & UX",
+        "電池與超充技術 · Battery & Ultra-Fast Charging",
+        "自動駕駛與車聯網 · Autonomous Driving & V2X",
+        "綠色出行與智慧交通 · Green & Smart Transit"
+      ]
+    },
+    {
+      "key": "visitor_role",
+      "label": "參觀者身份 · Visitor Identity",
+      "type": "select",
+      "required": false,
+      "options": [
+        "行業專家 / 研發工程師 · Industry Expert / R&D",
+        "參展商 / 供應鏈代表 · Exhibitor / Supplier",
+        "商業買家 / 投資人 · Business Buyer / Investor",
+        "科技愛好者 / 公眾觀眾 · Tech Enthusiast / General Visitor",
+        "高校師生 / 媒體代表 · Academic / Media"
+      ]
+    },
+    {
+      "key": "experience_rating",
+      "label": "展品看點評分 · Exhibit Rating",
+      "type": "select",
+      "required": false,
+      "options": [
+        "★★★★★ 卓越前瞻 · Outstanding & Forward-looking",
+        "★★★★☆ 很有啟發 · Highly Inspiring",
+        "★★★☆☆ 符合預期 · Met Expectations"
+      ]
+    },
+    {
+      "key": "observation_notes",
+      "label": "看點心得與觀察 · Insights & Observations",
+      "type": "text",
+      "required": false,
+      "placeholder": "請簡述照片展品最吸引你的技術或設計亮點（選填）· Highlight notes (optional)"
+    }
+  ],
   "market_research_config": {
     "dashboard_title": "車展參觀者眼中的看點 · AI 即時洞察看板",
     "dashboard_subtitle": "道路03 · 收集、拆解、重組現場觀眾照片與評價（導師：Judy Wong）",
