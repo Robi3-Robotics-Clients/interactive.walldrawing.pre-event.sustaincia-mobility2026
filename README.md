@@ -40,7 +40,7 @@ Because the exact mix of exhibits photographed by attendees is only known once p
 
 1. **Stage 1: Preliminary Photo Collection & Field Submission (`/market-research/sustaincia-mobility2026`)**
    - **Toggles in `event_ui/go-config.json`**:
-     - `"enable_lucky_draw": false`: Hides the gift corner icon on the projection wall.
+     - `"enable_lucky_draw": true`: Displays the gift corner icon on the projection wall to run lucky draws.
      - `"enable_market_research": true`: Activates the live research dashboard (`#corner-dashboard`).
      - `"enabled": false`, `"enable_event_form": false`: Bypasses external forms and completes submission immediately in the app.
      - `"capture_instruction"` / `"capture_instruction_en"`: Event-tailored capture instructions displayed to visitors.
