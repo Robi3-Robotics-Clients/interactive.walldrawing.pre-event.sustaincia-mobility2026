@@ -42,7 +42,7 @@ Because the exact mix of exhibits photographed by attendees is only known once p
    - **Toggles in `event_ui/go-config.json`**:
      - `"enable_lucky_draw": true`: Displays the gift corner icon on the projection wall to run lucky draws.
      - `"enable_market_research": true`: Activates the live research dashboard (`#corner-dashboard`).
-     - `"first_photo_is_profile": false`: Portrait mode disabled (all 5 photos are treated as exhibit/item photos; note: portrait mode is changeable at event config settings only and is currently UNVERIFIED in live production).
+     - `"add-first-photo-as-protrait": false` / `"add_first_photo_as_portrait": false`: Portrait mode disabled (all 5 photos are treated as exhibit/item photos; note: portrait mode is changeable at event config settings only and is currently UNVERIFIED in live production).
      - `"enabled": false`, `"enable_event_form": false`: Bypasses external forms and completes submission immediately in the app.
      - `"capture_instruction"` / `"capture_instruction_en"`: Event-tailored capture instructions displayed to visitors.
      - `"analysis_fields"`: 4 structured dimensions (`interest_topic`, `visitor_role`, `experience_rating`, `observation_notes`) collected directly on the Arrange & Submit page.
