@@ -6,6 +6,8 @@
   "home_title": "交通出行人工智能流程演示",
   "home_description": "道路03 · 車展參觀者眼中的看點（導師：Judy Wong）\n在超寬 LED 大屏上即時呈現色彩偏好、汽車部件與品牌關注度洞察",
   "market_research_photo_count": 5,
+  "add_first_photo_as_portrait": false,
+  "add-first-photo-as-protrait": false,
   "first_photo_is_profile": false,
   "enable_lucky_draw": true,
   "enable_market_research": true,
