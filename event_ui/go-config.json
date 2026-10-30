@@ -88,7 +88,6 @@
         "label": "色彩偏好",
         "type": "string",
         "widget": "color_distribution",
-        "color_ref_key": "color_hex",
         "examples": [
           "賽車紅",
           "珍珠白",
@@ -98,18 +97,6 @@
           "電光藍"
         ],
         "description": "照片中展品或主體最顯著的顏色名稱"
-      },
-      {
-        "key": "color_hex",
-        "label": "代表色碼",
-        "type": "hex_color",
-        "examples": [
-          "#D93A22",
-          "#F4EFE5",
-          "#F0B428",
-          "#2B2B2B"
-        ],
-        "description": "對應 dominant_color 的 HEX 色碼"
       },
       {
         "key": "visual_focus",
